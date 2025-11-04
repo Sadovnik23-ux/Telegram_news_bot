@@ -23,7 +23,7 @@ async def run_bot():
 if __name__ == "__main__":
     import uvicorn
 
-    asyncio.get_event_loop().create_task(run_bot())
+    asyncio.create_task(run_bot())
 
     port = int(os.getenv("PORT", "8000"))
     uvicorn.run(app, host="0.0.0.0", port=port)
